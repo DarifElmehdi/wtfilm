@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function MovieCard(props) {
-  const { src, name, release, rating, genres_ids } = props;
+  const { src, name, rating, genres_ids } = props;
   const genres_names = [
     {
       id: 28,
@@ -82,13 +82,12 @@ export default function MovieCard(props) {
       name: "Western",
     },
   ];
-
   return (
     <Link href="#">
       <div className="group m-1 relative rounded-tl-mdrounded-tl-md border-4 border-secondary-foreground overflow-hidden hover:border-primary  ">
         <Image src={src} width={260} height={200} alt={name} />
         <div className=" invisible group-hover:visible font-semibold text-lg  w-full h-full flex flex-col items-center justify-evenly absolute top-0  bg-primary-foreground">
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col items-center space-y-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
