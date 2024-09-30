@@ -14,13 +14,13 @@ export default function sitemap() {
   console.log(imdb_ids);
   return [
     {
-      url: "https://acme.comhttps://newyts.vercel.app/",
+      url: "https://newyts.vercel.app/",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://acme.comhttps://newyts.vercel.app/faq",
+      url: "https://newyts.vercel.app/faq",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
