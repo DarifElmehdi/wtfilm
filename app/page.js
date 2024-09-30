@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import MoviesCarousel from "./components/MoviesCarousel";
+import getIds from "./imdb_ids";
 
 export default function Home() {
   return (

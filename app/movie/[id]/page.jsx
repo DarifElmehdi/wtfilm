@@ -34,7 +34,7 @@ export default async function page({ params }) {
         <div className="flex flex-col items-center space-y-3">
           <SimpleCard
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-            name="Deadpool !"
+            name={movie.title}
           />
           <div className="space-x-3 flex flex-row max-w-">
             <a href="#player">
