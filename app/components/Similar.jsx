@@ -2,7 +2,7 @@ import React from "react";
 import SimpleCard from "./SimpleCard";
 import Link from "next/link";
 
-export default async function Recommendations(props) {
+export default async function Similar(props) {
   const { id } = props;
 
   const API_KEY = process.env.API_KEY;
@@ -15,7 +15,7 @@ export default async function Recommendations(props) {
     },
   };
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`,
+    `https://api.themoviedb.org/3/movie/${id}/similar?language=en-US&page=1`,
     options
   );
 
@@ -26,7 +26,7 @@ export default async function Recommendations(props) {
   }
   const recommendations = data.results.slice(0, 4);
   return (
-    <section>
+    <section className="px-2">
       <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
         Similar Movies
       </h3>

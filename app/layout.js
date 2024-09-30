@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
         name="google-site-verification"
         content="ayXiRB1PdfaxbYm2NK_OPqX8G9uwIJTDdngwzsMq5JU"
       />
-      <body className={`${geistSans.variable} ${geistMono.variable} `}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth `}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

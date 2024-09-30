@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import MoviesCarousel from "./components/MoviesCarousel";
@@ -10,6 +11,7 @@ export default function Home() {
       <MoviesCarousel name="Popular Picks" location="popular" />
       <MoviesCarousel name="Now Trending" />
       <MoviesCarousel name="Don't Miss These" location="upcoming" />
+      <Footer />
     </div>
   );
 }

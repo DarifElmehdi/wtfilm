@@ -1,8 +1,9 @@
 import Header from "@/app/components/Header";
-import Recommendations from "@/app/components/Recommendations";
+import Similar from "@/app/components/Similar";
 import SimpleCard from "@/app/components/SimpleCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Footer from "@/app/components/Footer";
 import React from "react";
 
 export default async function page({ params }) {
@@ -25,17 +26,35 @@ export default async function page({ params }) {
     throw new Error("Failed to fetch data");
   }
   const movie = data;
+
   return (
     <div>
       <Header />
-      <section className="w-full max-w-screen-lg flex flex-col items-center md:items-start md:flex-row  mx-auto space-y-8 md:space-y-0 mt-8">
-        <div className="w-full flex flex-col items-center space-y-3 max-w-xs">
+      <section className="w-full max-w-screen-lg flex flex-col items-center md:items-start md:flex-row  mx-auto space-y-4 md:space-y-0 mt-8">
+        <div className="flex flex-col items-center space-y-3">
           <SimpleCard
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             name="Deadpool !"
           />
-          <div className="space-x-3 flex flex-row">
-            <Button className="bg-chart-2">
+          <div className="space-x-3 flex flex-row max-w-">
+            <a href="#player">
+              <Button variant="destructive" href="#player">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <p className="mx-2">Watch Now</p>
+              </Button>
+            </a>
+            <Button variant="secondary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -50,7 +69,22 @@ export default async function page({ params }) {
               </svg>
               <p className="mx-2">Download</p>
             </Button>
-            <Button className="bg-chart-4">
+          </div>
+        </div>
+        <Separator className="md:hidden" />
+        <div className="px-2 space-y-3 md:pt-8">
+          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+            {movie.title}
+          </h3>
+          <p className="leading-7 px-4">{movie.tagline}</p>
+          <Separator />
+          <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
+            Plot Summary
+          </h3>
+          <blockquote className=" px-4 italic">{movie.overview}</blockquote>
+          <Separator />
+          <section className="flex flex-row w-full justify-evenly items-center">
+            <div className="flex flex-row space-x-2 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -59,36 +93,45 @@ export default async function page({ params }) {
               >
                 <path
                   fillRule="evenodd"
-                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="mx-2">Watch Now</p>
-            </Button>
-          </div>
-        </div>
-        <div className="px-2 space-y-2">
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-            {movie.title}
-          </h3>
-          <p className="leading-7 px-4">{movie.tagline}</p>
-          <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
-            Plot Summary
-          </h3>
-          <blockquote className=" px-4 italic">{movie.overview}</blockquote>
-
-          <section className="flex flex-row w-full justify-evenly">
-            <h2>{movie.release_date}</h2>
-            <Separator orientation="vertical" />
-            <h2>{movie.vote_average}</h2>
-            <Separator orientation="vertical" />
+              <h2>{Number(movie.vote_average).toFixed(1)} /10</h2>
+            </div>
+            <Separator orientation="vertical" className="h-5" />
+            <h2>{movie.release_date.split("-")[0]}</h2>
+            <Separator orientation="vertical" className="h-5" />
             <h2>{movie.origin_country}</h2>
           </section>
+          <Separator />
+
+          <div className="flex  flex-wrap justify-center w-full space-x-6 ">
+            {movie.genres.map((item) => (
+              <a
+                variant="ghost"
+                className="px-4 py-2 rounded-sm bg-secondary text-secondary-foreground"
+                key={item.id}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
         </div>
+        <Separator className="md:hidden" />
         <div>
-          <Recommendations id={movie.id} />
+          <Similar id={movie.id} />
         </div>
       </section>
+      <Separator className="max-w-screen-lg my-4 mx-auto" />
+      <div id="player" className="max-w-screen-lg mx-auto my-4">
+        <iframe
+          className="w-full aspect-video "
+          allowFullScreen
+          src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
+        ></iframe>
+      </div>
+      <Footer />
     </div>
   );
 }
