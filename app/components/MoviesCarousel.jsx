@@ -33,7 +33,7 @@ export default async function MoviesCarousel(props) {
   const popular = data.results.slice(0, 10);
   return (
     <div className="w-full  max-w-screen-lg flex flex-col items-center space-y-6 mt-8">
-      <h4 className="text-secondary-primary">{name}</h4>
+      <h4 className="text-secondary-primary font-normal italic">{name}</h4>
       <Carousel
         opts={{
           align: "center",
@@ -48,11 +48,12 @@ export default async function MoviesCarousel(props) {
             >
               <MovieCard
                 key={item.id}
-                src={`https://image.tmdb.org/t/p/w300//${item.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
                 name={item.title}
                 rating={Number(item.vote_average).toFixed(1)}
                 genres_ids={item.genre_ids.slice(0, 3)}
                 release={item.release_date.split("-")[0]}
+                id={item.id}
               />
             </CarouselItem>
           ))}

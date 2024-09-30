@@ -7,9 +7,9 @@ export default function Home() {
     <div className="flex flex-col items-center">
       <Header />
       <Hero />
-      <MoviesCarousel name="Popular Now" location="popular" />
-      <MoviesCarousel name="Trending Today" />
-      <MoviesCarousel name="Upcoming" location="upcoming" />
+      <MoviesCarousel name="Popular Picks" location="popular" />
+      <MoviesCarousel name="Now Trending" />
+      <MoviesCarousel name="Don't Miss These" location="upcoming" />
     </div>
   );
 }

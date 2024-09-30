@@ -5,7 +5,7 @@ export default async function Hero() {
   return (
     <div className="w-full max-w-screen-lg   flex flex-col items-center space-y-8 mt-8 ">
       <h3 className="text-center scroll-m-20 text-2xl font-semibold tracking-tight">
-        Download YTS YIFY movies: HD smallest size
+        Download YTS YIFY Movies: High Definition in the Smallest File Size
       </h3>
       <blockquote className="max-w-screen-md w-full px-4 text-pretty italic">
         Welcome to the new official YTS website. Here you can browse, watch and
