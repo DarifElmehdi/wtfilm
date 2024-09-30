@@ -31,14 +31,17 @@ export default async function Similar(props) {
         Similar Movies
       </h3>
       <div className="grid grid-cols-2 gap-1 mt-4 min-w-64">
-        {recommendations.map((item) => (
-          <Link href={`/movie/${item.id}`} key={item.id}>
-            <SimpleCard
-              src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
-              name={item.title}
-            />
-          </Link>
-        ))}
+        {recommendations.map(
+          (item) =>
+            item.poster_path && (
+              <Link href={`/movie/${item.id}`} key={item.id}>
+                <SimpleCard
+                  src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
+                  name={item.title}
+                />
+              </Link>
+            )
+        )}
       </div>
     </section>
   );

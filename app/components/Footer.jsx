@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
           ))}
         </ul>
-        <aside className="mx-auto text-foreground">
+        <aside className="mx-auto text-muted-foreground">
           <p>Copyright © {new Date().getFullYear()} - Zen Mehdi</p>
         </aside>
       </footer>

@@ -52,7 +52,6 @@ export default async function MoviesCarousel(props) {
                 name={item.title}
                 rating={Number(item.vote_average).toFixed(1)}
                 genres_ids={item.genre_ids.slice(0, 3)}
-                release={item.release_date.split("-")[0]}
                 id={item.id}
               />
             </CarouselItem>

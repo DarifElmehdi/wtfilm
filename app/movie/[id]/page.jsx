@@ -33,7 +33,7 @@ export default async function page({ params }) {
       <section className="w-full max-w-screen-lg flex flex-col items-center md:items-start md:flex-row  mx-auto space-y-4 md:space-y-0 mt-8">
         <div className="flex flex-col items-center space-y-3">
           <SimpleCard
-            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             name={movie.title}
           />
           <div className="space-x-3 flex flex-row max-w-">
@@ -106,11 +106,11 @@ export default async function page({ params }) {
           </section>
           <Separator />
 
-          <div className="flex  flex-wrap justify-center w-full space-x-6 ">
+          <div className="flex  flex-wrap  justify-center w-full gap-4">
             {movie.genres.map((item) => (
               <a
                 variant="ghost"
-                className="px-4 py-2 rounded-sm bg-secondary text-secondary-foreground"
+                className="px-4 py-2 rounded-md bg-secondary text-secondary-foreground"
                 key={item.id}
               >
                 {item.name}

@@ -83,7 +83,7 @@ export default function MovieCard(props) {
     },
   ];
   return (
-    <Link href={`movie/${id}`}>
+    <Link href={`/movie/${id}`}>
       <div className="group m-1 w-fit relative border-4 border-secondary-foreground overflow-hidden hover:border-primary  ">
         <Image src={src} width={260} height={200} alt={name} />
         <div className=" invisible group-hover:visible font-medium text-lg  w-full h-full flex flex-col items-center justify-evenly absolute top-0  bg-primary-foreground/75">
