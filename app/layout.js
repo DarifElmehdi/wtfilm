@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
       <meta name="msvalidate.01" content="975F605DE963BC445587F2A7C64B3E4D" />
       <meta
         name="google-site-verification"
-        content="gLuq2Bx-J0w2wkT4Y7GoQFhNG4iWuUxBjl5AgFMR8Mg"
+        content="ayXiRB1PdfaxbYm2NK_OPqX8G9uwIJTDdngwzsMq5JU"
       />
       <body
         className={`${geistSans.variable} ${geistMono.variable} scroll-smooth `}
