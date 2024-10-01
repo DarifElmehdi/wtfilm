@@ -39,11 +39,8 @@ export default function Header() {
     <div className="w-full flex flex-col items-center">
       <header className=" w-full max-w-screen-lg sticky top-0  flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
         <nav className="hidden flex-col  gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-          <Link
-            href="#"
-            className="flex items-center gap-2 text-lg font-semibold md:text-base"
-          >
-            <span className="sr-only">YTS</span>
+          <Link href="#" className="flex items-center gap-2 text-md font-bold ">
+            <span className="not-sr-only text-nowrap">YTS-MX</span>
           </Link>
 
           {hrefs.map((item) => (

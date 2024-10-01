@@ -2,9 +2,9 @@ export default function robots() {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/movie", "/faq"],
+      allow: ["/", "/*/"],
       disallow: "",
     },
-    sitemap: "https://newyts.vercel.app/sitemap.xml",
+    sitemap: "https://yts-mx.vercel.app/sitemap.xml",
   };
 }
