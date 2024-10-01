@@ -2,9 +2,8 @@ export default function robots() {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/*/"],
-      disallow: "",
+      allow: "*",
     },
-    sitemap: "https://yts-mx.vercel.app/sitemap.xml",
+    sitemap: "https://yts-three.vercel.app/sitemap.xml",
   };
 }
