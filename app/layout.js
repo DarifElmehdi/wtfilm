@@ -118,7 +118,7 @@ export const metadata = {
     "Watch free movies in 4K",
   ],
   title: {
-    default: "WTFilm - The Official Home of YIFY Movies Torrent Download",
+    default: "WTFilm - Watch Movies For Free",
     template: ["%s | WTFilm", "WTFilm | %s"],
   },
   openGraph: {

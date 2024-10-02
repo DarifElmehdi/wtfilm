@@ -4,10 +4,6 @@ import MovieCard from "@/app/components/MovieCard";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
-export const metadata = {
-  title: "Search Results",
-};
-
 export default async function page({ params }) {
   const query = decodeURI(params.query);
 
