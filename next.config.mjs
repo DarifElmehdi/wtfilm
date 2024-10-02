@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "image.tmdb.org",
       },
+      {
+        protocol: "https",
+        hostname: "yts.mx",
+      },
     ], // Add your image host domains here
   },
 };

@@ -9,8 +9,10 @@ export default function Home() {
     <div className="flex flex-col items-center">
       <Header />
       <Hero />
+      <MoviesCarousel name="Trending Today" />
       <MoviesCarousel name="Popular Picks" location="popular" />
-      <MoviesCarousel name="Now Trending" />
+      <MoviesCarousel name="Now Playing" location="now_playing" />
+      <MoviesCarousel name="Top Rated" location="top_rated" />
       <MoviesCarousel name="Don't Miss These" location="upcoming" />
       <Footer />
     </div>

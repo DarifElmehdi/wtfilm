@@ -34,7 +34,7 @@ export default async function page({ params }) {
           Search Results for : <span className="italic">{query}</span>
         </h1>
         <Separator />
-        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 py-6">
+        <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 py-6">
           {search.map(
             (item) =>
               item.poster_path && (

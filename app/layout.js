@@ -74,7 +74,7 @@ export const metadata = {
   openGraph: {
     description:
       "Welcome to the new official YTS website. Here you can browse, watch and download YIFY movies in excellent 720p, 1080p, 2160p 4K and 3D quality,all at the smallest file size. YTS Movies Torrents.",
-    images: ["app/new_yts.png"],
+    images: ["./new_yts.png"],
   },
 };
 
@@ -87,7 +87,7 @@ export default function RootLayout({ children }) {
         content="ayXiRB1PdfaxbYm2NK_OPqX8G9uwIJTDdngwzsMq5JU"
       />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth `}
+        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth font-Dosis`}
       >
         <ThemeProvider
           attribute="class"

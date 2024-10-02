@@ -85,7 +85,9 @@ export default function MovieCard(props) {
   return (
     <Link href={`/movie/${id}`}>
       <div className="group m-1 w-fit relative border-4 border-secondary-foreground overflow-hidden hover:border-primary  ">
-        <Image src={src} width={260} height={200} alt={name} />
+        <div className="w-40 h-64">
+          <Image src={src} fill alt={name} />
+        </div>
         <div className=" invisible group-hover:visible font-medium text-lg  w-full h-full flex flex-col items-center justify-evenly absolute top-0  bg-primary-foreground/75">
           <div className="flex flex-col items-center space-y-1">
             <svg

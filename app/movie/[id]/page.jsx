@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/app/components/Footer";
 import React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default async function page({ params }) {
   const id = params.id;
@@ -33,8 +34,9 @@ export default async function page({ params }) {
       <section className="w-full max-w-screen-lg flex flex-col items-center md:items-start md:flex-row  mx-auto space-y-4 md:space-y-0 mt-8">
         <div className="flex flex-col items-center space-y-3">
           <SimpleCard
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             name={movie.title}
+            main={true}
           />
           <div className="space-x-3 flex flex-row max-w-">
             <a href="#player">
@@ -125,11 +127,26 @@ export default async function page({ params }) {
       </section>
       <Separator className="max-w-screen-lg my-4 mx-auto" />
       <div id="player" className="max-w-screen-lg mx-auto my-4">
-        <iframe
-          className="w-full aspect-video "
-          allowFullScreen
-          src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
-        ></iframe>
+        <Tabs defaultValue="server1">
+          <TabsList>
+            <TabsTrigger value="server1">Server 1</TabsTrigger>
+            <TabsTrigger value="server2">Server 2</TabsTrigger>
+          </TabsList>
+          <TabsContent value="server1">
+            <iframe
+              className="w-full aspect-video "
+              allowFullScreen
+              src={`https://vidsrc.xyz/embed/movie/${movie.imdb_id}`}
+            ></iframe>
+          </TabsContent>
+          <TabsContent value="server2">
+            <iframe
+              className="w-full aspect-video "
+              allowFullScreen
+              src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
+            ></iframe>
+          </TabsContent>
+        </Tabs>
       </div>
       <Footer />
     </div>

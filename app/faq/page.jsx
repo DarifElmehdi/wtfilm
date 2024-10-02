@@ -6,14 +6,13 @@ import {
 } from "@/components/ui/accordion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Separator } from "@/components/ui/separator";
 
 export default function page() {
   return (
     <div>
       <Header />
       <div className="min-h-screen">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl w-full text-center my-8">
+        <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-3xl w-full text-center my-8">
           FAQ
         </h1>
         <Accordion

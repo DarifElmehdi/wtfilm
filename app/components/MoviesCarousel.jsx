@@ -30,7 +30,7 @@ export default async function MoviesCarousel(props) {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  const popular = data.results.slice(0, 10);
+  const popular = data.results.slice(0, 12);
   return (
     <div className="w-full  max-w-screen-lg flex flex-col items-center space-y-6 mt-8">
       <h4 className="text-secondary-primary font-normal italic">{name}</h4>
@@ -44,7 +44,7 @@ export default async function MoviesCarousel(props) {
           {popular.map((item) => (
             <CarouselItem
               key={item.id}
-              className="basis-1/2 md:basis-1/3 lg:basis-1/5"
+              className="basis-1/2 md:basis-1/4 lg:basis-1/6"
             >
               <MovieCard
                 key={item.id}

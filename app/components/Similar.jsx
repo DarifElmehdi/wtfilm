@@ -15,7 +15,7 @@ export default async function Similar(props) {
     },
   };
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/similar?language=en-US&page=1`,
+    `https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`,
     options
   );
 
@@ -30,7 +30,7 @@ export default async function Similar(props) {
       <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
         Similar Movies
       </h3>
-      <div className="grid grid-cols-2 gap-1 mt-4 min-w-64">
+      <div className="grid grid-cols-2 gap-2 mt-4 min-w-64">
         {recommendations.map(
           (item) =>
             item.poster_path && (
