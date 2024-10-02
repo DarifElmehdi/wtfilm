@@ -7,7 +7,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "image.tmdb.org",
       },
-    ], // Add your image host domains here
+    ],
+    unoptimized: true, // Add your image host domains here
   },
 };
 
