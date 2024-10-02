@@ -4,13 +4,7 @@ import MovieCard from "@/app/components/MovieCard";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
-export const metadata = {
-  title: "Search Results",
-};
-
-export default async function page({ params }) {
-  const query = decodeURI(params.query);
-
+export default async function page() {
   const API_KEY = process.env.API_KEY;
   const API_TOKEN = process.env.API_TOKEN;
   const options = {
@@ -20,14 +14,12 @@ export default async function page({ params }) {
       Authorization: `Bearer  ${API_TOKEN}`,
     },
   };
-
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${query}&language=en-US&page=1&include_adult=false?language=en-US&page=1`,
+    `https://api.themoviedb.org/3/trending/movie/day?language=en-US`,
     options
   );
 
   const data = await res.json();
-
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -37,7 +29,7 @@ export default async function page({ params }) {
       <Header />
       <div className="min-h-screen max-w-screen-lg mx-auto">
         <h1 className="text-secondary-primary font-normal w-full text-center my-4">
-          Search Results for : <span className="italic">{query}</span>
+          Trending Movies
         </h1>
         <Separator />
         <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 py-6">

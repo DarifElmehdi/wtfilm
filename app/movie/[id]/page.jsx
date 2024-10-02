@@ -129,21 +129,21 @@ export default async function page({ params }) {
       <div id="player" className="max-w-screen-lg mx-auto my-4">
         <Tabs defaultValue="server1">
           <TabsList>
-            <TabsTrigger value="server1">Server 1</TabsTrigger>
-            <TabsTrigger value="server2">Server 2</TabsTrigger>
+            <TabsTrigger value="server1">Primary Server</TabsTrigger>
+            <TabsTrigger value="server2">Backup Server</TabsTrigger>
           </TabsList>
           <TabsContent value="server1">
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              src={`https://vidsrc.xyz/embed/movie/${movie.imdb_id}`}
+              src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
           <TabsContent value="server2">
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
+              src={`https://vidsrc.xyz/embed/movie/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
         </Tabs>
