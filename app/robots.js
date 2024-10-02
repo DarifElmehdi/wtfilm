@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: ["/", "/movie", "/popular", "/trending", "/faq", "/searchresults"],
     },
-    sitemap: "https://yts-three.vercel.app/sitemap.xml",
+    sitemap: "https://wtfilm.vercel.app//sitemap.xml",
   };
 }

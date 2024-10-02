@@ -1,7 +1,7 @@
 import getIds from "./imdb_ids";
 
 export default function sitemap() {
-  const baseURL = "https://yts-three.vercel.app";
+  const baseURL = "https://wtfilm.vercel.app/";
   const imdb_ids = getIds();
   const moviePages = imdb_ids?.map((id) => {
     return {
@@ -13,25 +13,25 @@ export default function sitemap() {
   });
   return [
     {
-      url: "https://yts-three.vercel.app/",
+      url: "https://wtfilm.vercel.app/",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://yts-three.vercel.app/faq",
+      url: "https://wtfilm.vercel.app/faq",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://yts-three.vercel.app/popular",
+      url: "https://wtfilm.vercel.app/popular",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://yts-three.vercel.app/trending",
+      url: "https://wtfilm.vercel.app/trending",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
