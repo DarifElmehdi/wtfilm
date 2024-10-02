@@ -11,7 +11,6 @@ export default function sitemap() {
       priority: 0.5,
     };
   });
-  console.log(imdb_ids);
   return [
     {
       url: "https://yts-three.vercel.app/",

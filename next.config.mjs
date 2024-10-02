@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  distDir: "dist",
   images: {
     remotePatterns: [
       {
@@ -11,7 +12,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "yts.mx",
       },
-    ], // Add your image host domains here
+    ],
+    unoptimized: true, // Add your image host domains here
   },
 };
 
