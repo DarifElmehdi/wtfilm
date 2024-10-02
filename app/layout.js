@@ -81,6 +81,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta name="yandex-verification" content="ae71ed3e6f8edb60" />
       <meta name="msvalidate.01" content="975F605DE963BC445587F2A7C64B3E4D" />
       <meta
         name="google-site-verification"

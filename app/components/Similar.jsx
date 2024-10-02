@@ -36,7 +36,7 @@ export default async function Similar(props) {
             item.poster_path && (
               <Link href={`/movie/${item.id}`} key={item.id}>
                 <SimpleCard
-                  src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`}
                   name={item.title}
                 />
               </Link>

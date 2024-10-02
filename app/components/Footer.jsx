@@ -5,14 +5,9 @@ import React from "react";
 export default function Footer() {
   const hrefs = [
     {
-      id: 0,
-      name: "Home",
-      href: "/",
-    },
-    {
       id: 2,
-      name: "4k",
-      href: "/4k",
+      name: "Popular",
+      href: "/popular",
     },
     {
       id: 3,

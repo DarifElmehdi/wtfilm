@@ -7,21 +7,33 @@ export default function sitemap() {
     return {
       url: `${baseURL}/movie/${id}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.5,
+      changeFrequency: "yearly",
+      priority: 1,
     };
   });
   return [
     {
       url: "https://yts-three.vercel.app/",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: "https://yts-three.vercel.app/faq",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: "https://yts-three.vercel.app/popular",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: "https://yts-three.vercel.app/trending",
+      lastModified: new Date(),
+      changeFrequency: "daily",
       priority: 1,
     },
     ...moviePages,

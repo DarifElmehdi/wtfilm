@@ -48,7 +48,7 @@ export default async function MoviesCarousel(props) {
             >
               <MovieCard
                 key={item.id}
-                src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                 name={item.title}
                 rating={Number(item.vote_average).toFixed(1)}
                 genres_ids={item.genre_ids.slice(0, 3)}

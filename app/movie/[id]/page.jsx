@@ -1,6 +1,7 @@
 import Header from "@/app/components/Header";
 import Similar from "@/app/components/Similar";
 import SimpleCard from "@/app/components/SimpleCard";
+import Keywords from "@/app/components/Keywords";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/app/components/Footer";
@@ -107,7 +108,6 @@ export default async function page({ params }) {
             <h2>{movie.origin_country}</h2>
           </section>
           <Separator />
-
           <div className="flex  flex-wrap  justify-center w-full gap-4">
             {movie.genres.map((item) => (
               <a
@@ -126,7 +126,7 @@ export default async function page({ params }) {
         </div>
       </section>
       <Separator className="max-w-screen-lg my-4 mx-auto" />
-      <div id="player" className="max-w-screen-lg mx-auto my-4">
+      <div id="player" className="max-w-screen-lg mx-auto my-4 space-y-4">
         <Tabs defaultValue="server1">
           <TabsList>
             <TabsTrigger value="server1">Primary Server</TabsTrigger>
@@ -147,7 +147,10 @@ export default async function page({ params }) {
             ></iframe>
           </TabsContent>
         </Tabs>
+        <Separator />
+        <Keywords id={movie.id} />
       </div>
+
       <Footer />
     </div>
   );
