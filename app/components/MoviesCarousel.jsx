@@ -44,7 +44,7 @@ export default async function MoviesCarousel(props) {
           {popular.map((item) => (
             <CarouselItem
               key={item.id}
-              className="basis-1/2 md:basis-1/4 lg:basis-1/6"
+              className="basis-1/2 md:basis-1/3 lg:basis-1/5"
             >
               <MovieCard
                 key={item.id}
