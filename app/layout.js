@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -136,6 +137,14 @@ export default function RootLayout({ children }) {
         name="google-site-verification"
         content="ayXiRB1PdfaxbYm2NK_OPqX8G9uwIJTDdngwzsMq5JU"
       />
+      <Script
+        type="text/javascript"
+        src="//thermometerpushfulabnegate.com/72/28/8e/72288ec7edc033db4b3a5dfda653af37.js"
+      ></Script>
+      <Script
+        type="text/javascript"
+        src="//thermometerpushfulabnegate.com/d6/4e/c1/d64ec10293c2399069c4afd581fae50b.js"
+      ></Script>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
           attribute="class"
