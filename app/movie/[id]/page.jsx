@@ -132,23 +132,43 @@ export default async function page({ params }) {
       </section>
       <Separator className="max-w-screen-lg my-4 mx-auto" />
       <div id="player" className="max-w-screen-lg mx-auto my-4 space-y-4">
-        <Tabs defaultValue="server1">
+        <Tabs defaultValue="player1">
           <TabsList>
-            <TabsTrigger value="server1">Primary Server</TabsTrigger>
-            <TabsTrigger value="server2">Backup Server</TabsTrigger>
+            <TabsTrigger value="player1">Main Player</TabsTrigger>
+            <TabsTrigger value="player2">Player 2</TabsTrigger>
+            <TabsTrigger value="player3">Player 3</TabsTrigger>
+            <TabsTrigger value="player4">Player 4</TabsTrigger>
           </TabsList>
-          <TabsContent value="server1">
+          <TabsContent value="player1">
             <iframe
               className="w-full aspect-video "
               allowFullScreen
+              frameborder={0}
               src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
-          <TabsContent value="server2">
+          <TabsContent value="player2">
             <iframe
               className="w-full aspect-video "
               allowFullScreen
+              frameborder={0}
               src={`https://vidsrc.xyz/embed/movie/${movie.imdb_id}`}
+            ></iframe>
+          </TabsContent>
+          <TabsContent value="player3">
+            <iframe
+              className="w-full aspect-video "
+              allowFullScreen
+              frameborder={0}
+              src={`https://vidlink.pro/movie/${movie.imdb_id}`}
+            ></iframe>
+          </TabsContent>
+          <TabsContent value="player4">
+            <iframe
+              className="w-full aspect-video "
+              allowFullScreen
+              frameborder={0}
+              src={`https://multiembed.mov/?video_id=${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
         </Tabs>
