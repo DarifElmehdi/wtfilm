@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import wtfilm from "./wtfilm.png";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -126,7 +127,7 @@ export const metadata = {
     title: "WTFilm - Watch Movies For Free", // Added Open Graph title
     description:
       "Welcome to WTFilm, your ultimate destination for watching and staying updated on the latest hit movies. Stream in flawless 1080p, 4K, or even 3D—all with lightning-fast load times. Say goodbye to buffering and hello to premium entertainment.",
-    image: "wtfilm.png", // Replace with your image URL
+    image: wtfilm, // Replace with your image URL
     url: "https://wtfilm.vercel.app/", // Your website URL
     type: "website", // Open Graph type
   },
