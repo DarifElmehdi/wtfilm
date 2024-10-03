@@ -136,6 +136,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta
+        name="facebook-domain-verification"
+        content="pjzfctk9bdonotdfsf5gpac2hh328e"
+      />
       <meta name="yandex-verification" content="3f44e63884fae852" />
       <meta name="msvalidate.01" content="975F605DE963BC445587F2A7C64B3E4D" />
       <meta
