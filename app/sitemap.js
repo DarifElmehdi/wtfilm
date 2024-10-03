@@ -8,32 +8,32 @@ export default function sitemap() {
       url: `${baseURL}/movie/${id}`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 1,
+      priority: 0.5,
     };
   });
   return [
     {
       url: "https://wtfilm.vercel.app/",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
       url: "https://wtfilm.vercel.app/faq",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
       url: "https://wtfilm.vercel.app/popular",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
       url: "https://wtfilm.vercel.app/trending",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "yearly",
       priority: 1,
     },
     ...moviePages,
