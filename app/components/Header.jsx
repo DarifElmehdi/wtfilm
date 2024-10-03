@@ -9,6 +9,11 @@ import SearchBar from "./SearchBar";
 
 const hrefs = [
   {
+    id: 1,
+    name: "Home",
+    href: "/",
+  },
+  {
     id: 2,
     name: "Popular",
     href: "/popular",
