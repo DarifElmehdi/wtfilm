@@ -14,6 +14,7 @@ export default async function Hero() {
         destination for watching and staying updated on the latest hit movies.
         Stream in flawless 1080p.
         <span className="sr-only md:not-sr-only">
+          {" "}
           All with lightning-fast load times. Say goodbye to buffering and hello
           to premium entertainment.
         </span>
@@ -23,6 +24,7 @@ export default async function Hero() {
           <span className="font-semibold">IMPORTANT</span> : WTFilm is your
           go-to platform for the latest in popular cinema.
           <span className="sr-only md:not-sr-only">
+            {" "}
             Stay ahead with exclusive access to trending films, all in one
             place.
           </span>

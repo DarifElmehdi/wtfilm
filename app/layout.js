@@ -122,6 +122,9 @@ export const metadata = {
     default: "WTFilm - Watch Movies For Free",
     template: ["%s | WTFilm", "WTFilm | %s"],
   },
+  title: "WTFilm - Watch Movies For Free", // Added Open Graph title
+  description:
+    "Welcome to WTFilm, your ultimate destination for watching and staying updated on the latest hit movies. Stream in flawless 1080p, 4K, or even 3D—all with lightning-fast load times. Say goodbye to buffering and hello to premium entertainment.",
   openGraph: {
     title: "WTFilm - Watch Movies For Free", // Added Open Graph title
     description:

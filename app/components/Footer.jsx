@@ -52,16 +52,3 @@ export default function Footer() {
     </div>
   );
 }
-
-/* <nav>
-        <div className="grid grid-flow-col gap-4 text-primary">
-          <a
-            target="_blank"
-            href="https://www.cpmrevenuegate.com/q8syeyg2?key=d8bfa1148e5e4276c6c4e7039a93d652"
-          ></a>
-          <a
-            target="_blank"
-            href="https://www.cpmrevenuegate.com/q8syeyg2?key=d8bfa1148e5e4276c6c4e7039a93d652"
-          ></a>
-        </div>
-      </nav>*/
