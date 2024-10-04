@@ -4,6 +4,15 @@ import MovieCard from "@/app/components/MovieCard";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
+export async function generateMetadata({ params }) {
+  const query = decodeURI(params.query);
+
+  return {
+    title: `${query} - WTFilm`, // Dynamically set the title
+    description: `Discover your results on WTFilm! Browse through movies matching your search criteria and find the perfect film to watch`, // Dynamically set the description
+  };
+}
+
 export default async function page({ params }) {
   const query = decodeURI(params.query);
 

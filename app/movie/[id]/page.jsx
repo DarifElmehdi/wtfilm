@@ -8,18 +8,34 @@ import Footer from "@/app/components/Footer";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+const API_KEY = process.env.API_KEY;
+const API_TOKEN = process.env.API_TOKEN;
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer  ${API_TOKEN}`,
+  },
+};
+
+export async function generateMetadata({ params }) {
+  const { id } = params;
+
+  // Fetch movie data based on the ID
+  const movie = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}`,
+    options
+  ).then((res) => res.json());
+  // Return the metadata
+  return {
+    title: `${movie.title} - WTFilm`, // Dynamically set the title
+    description: `${movie.overview}`, // Dynamically set the description
+  };
+}
+
 export default async function page({ params }) {
   const id = params.id;
 
-  const API_KEY = process.env.API_KEY;
-  const API_TOKEN = process.env.API_TOKEN;
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer  ${API_TOKEN}`,
-    },
-  };
   const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, options);
 
   const data = await res.json();

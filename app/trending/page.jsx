@@ -4,6 +4,13 @@ import MovieCard from "@/app/components/MovieCard";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
+export async function generateMetadata() {
+  return {
+    title: `Trending Movies - WTFilm`, // Dynamically set the title
+    description: `Highlights the relevance and timeliness of the content, inviting users to keep up with popular discussions`, // Dynamically set the description
+  };
+}
+
 export default async function page() {
   const API_KEY = process.env.API_KEY;
   const API_TOKEN = process.env.API_TOKEN;

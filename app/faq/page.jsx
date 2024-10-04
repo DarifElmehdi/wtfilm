@@ -7,6 +7,13 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+export async function generateMetadata() {
+  return {
+    title: `Frequently Asked Questions - WTFilm`, // Dynamically set the title
+    description: `Find answers to common questions about WTFilm, including streaming, subscriptions, and more. Get the help you need to enhance your movie experience!`, // Dynamically set the description
+  };
+}
+
 export default function page() {
   return (
     <div>

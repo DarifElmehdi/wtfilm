@@ -30,7 +30,7 @@ export default async function MoviesCarousel(props) {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  const popular = data.results.slice(0, 12);
+  const popular = data.results.slice(0, 10);
   return (
     <div className="w-full  max-w-screen-lg flex flex-col items-center space-y-6 mt-8">
       <h3 className="text-secondary-primary font-normal italic">{name}</h3>
