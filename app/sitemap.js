@@ -1,13 +1,13 @@
-import getIds from "./imdb_ids";
+import getIds from "./moviesIds";
 
-export default function sitemap() {
+export default async function sitemap() {
   const baseURL = "https://wtfilm.vercel.app/";
-  const imdb_ids = getIds();
-  const moviePages = imdb_ids?.map((id) => {
+  const imdb_ids = await getIds(50);
+  const moviePages = imdb_ids.map((id) => {
     return {
       url: `${baseURL}/movie/${id}`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "weekly",
       priority: 0.5,
     };
   });
@@ -15,26 +15,26 @@ export default function sitemap() {
     {
       url: "https://wtfilm.vercel.app/",
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: "https://wtfilm.vercel.app/faq",
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 1,
+      priority: 0.25,
     },
     {
       url: "https://wtfilm.vercel.app/popular",
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
+      changeFrequency: "daily",
+      priority: 0.5,
     },
     {
       url: "https://wtfilm.vercel.app/trending",
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
+      changeFrequency: "daily",
+      priority: 0.5,
     },
     ...moviePages,
   ];

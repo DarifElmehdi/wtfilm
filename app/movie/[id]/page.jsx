@@ -78,14 +78,14 @@ export default async function page({ params }) {
         </div>
         <Separator className="md:hidden" />
         <div className="px-2 space-y-3 md:pt-8">
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+          <h1 className="scroll-m-20 text-2xl font-semibold tracking-tight">
             {movie.title}
-          </h3>
+          </h1>
           <p className="leading-7 px-4">{movie.tagline}</p>
           <Separator />
-          <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
+          <h2 className="scroll-m-20 text-lg font-semibold tracking-tight">
             Plot Summary
-          </h3>
+          </h2>
           <blockquote className=" px-4 italic">{movie.overview}</blockquote>
           <Separator />
           <section className="flex flex-row w-full justify-evenly items-center">
