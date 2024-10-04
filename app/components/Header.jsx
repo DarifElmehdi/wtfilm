@@ -39,10 +39,14 @@ export default function Header() {
     <div className="w-full flex flex-col items-center">
       <header className=" w-full max-w-screen-lg sticky top-0  flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
         <ul className="hidden flex-col  gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-          <Link href="/" className="flex items-center gap-2 text-md font-bold ">
-            <span className="not-sr-only text-nowrap">WTFilm</span>
-          </Link>
-
+          <li>
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-md font-bold "
+            >
+              <span className="not-sr-only text-nowrap">WTFilm</span>
+            </Link>
+          </li>
           {hrefs.map((item) => (
             <li key={item.id} className="list-none">
               <Link
