@@ -57,10 +57,7 @@ export default async function page({ params }) {
                 <p className="mx-2">Watch Now</p>
               </Button>
             </a>
-            <a
-              target="_blank"
-              href="https://thermometerpushfulabnegate.com/v91j56sk?key=2dce535042a6582ec515de072042f72e"
-            >
+            <a href="#">
               <Button variant="secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
