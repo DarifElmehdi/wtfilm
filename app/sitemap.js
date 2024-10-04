@@ -2,7 +2,7 @@ import getIds from "./moviesIds";
 
 export default async function sitemap() {
   const baseURL = "https://wtfilm.vercel.app/";
-  const imdb_ids = await getIds(2499);
+  const imdb_ids = await getIds(500);
   const moviePages = imdb_ids.map((id) => {
     return {
       url: `${baseURL}/movie/${id}`,
