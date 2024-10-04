@@ -16,13 +16,14 @@ const geistMono = localFont({
 });
 
 export async function generateMetadata() {
+  const keywords = await getKeywords();
   return {
     metadataBase: "https://wtfilm.vercel.app/",
-    keywords: getKeywords(),
+    keywords: keywords,
     title: "WTFilm - Watch Movies For Free",
 
     description:
-      "Welcome to WTFilm, your premier destination for streaming the latest movies and staying updated on popular films. Enjoy seamless viewing in 1080p, 4K, or even 3D, with no buffering no ads — just pure entertainment at your fingertips.",
+      "Welcome to WTFilm - ZERO ADS, your premier destination for streaming the latest movies and staying updated on popular films. Enjoy seamless viewing in 1080p, 4K, or even 3D, with no buffering no ads — just pure entertainment at your fingertips.",
 
     openGraph: {
       title: "WTFilm - Watch Movies For Free",

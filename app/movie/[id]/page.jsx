@@ -156,7 +156,7 @@ export default async function page({ params }) {
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              frameborder={0}
+              frameBorder={0}
               src={`https://www.2embed.cc/embed/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
@@ -164,7 +164,7 @@ export default async function page({ params }) {
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              frameborder={0}
+              frameBorder={0}
               src={`https://vidsrc.xyz/embed/movie/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
@@ -172,7 +172,7 @@ export default async function page({ params }) {
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              frameborder={0}
+              frameBorder={0}
               src={`https://vidlink.pro/movie/${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
@@ -180,7 +180,7 @@ export default async function page({ params }) {
             <iframe
               className="w-full aspect-video "
               allowFullScreen
-              frameborder={0}
+              frameBorder={0}
               src={`https://multiembed.mov/?video_id=${movie.imdb_id}`}
             ></iframe>
           </TabsContent>
