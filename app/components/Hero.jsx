@@ -19,14 +19,14 @@ export default async function Hero() {
         </span>
       </blockquote>
       <Link href="#" className="text-primary px-4">
-        <h4>
+        <h2>
           <span className="font-semibold">IMPORTANT</span> : WTFilm is your
           go-to platform for the latest in popular cinema.
           <span className="sr-only md:not-sr-only">
             Stay ahead with exclusive access to trending films, all in one
             place.
           </span>
-        </h4>
+        </h2>
       </Link>
       <Link href="/popular">
         <Button variant="secondary" to="/popular" className="h-12 px-6">
