@@ -7,6 +7,8 @@ import { Separator } from "@/components/ui/separator";
 import Footer from "@/app/components/Footer";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import getKeywordsById from "@/app/utils/movieKeywords";
+import getKeywords from "@/app/utils/keywords";
 
 const API_KEY = process.env.API_KEY;
 const API_TOKEN = process.env.API_TOKEN;
@@ -20,6 +22,8 @@ const options = {
 
 export async function generateMetadata({ params }) {
   const { id } = params;
+  const keywords = getKeywords();
+  const keys = await getKeywordsById(id);
 
   // Fetch movie data based on the ID
   const movie = await fetch(
@@ -30,6 +34,17 @@ export async function generateMetadata({ params }) {
   return {
     title: `${movie.title} - WTFilm`, // Dynamically set the title
     description: `${movie.overview}`, // Dynamically set the description
+
+    keywords: `${keys.keywords.map((item) => item.name).concat(keywords)}`,
+    openGraph: {
+      title: `${movie.title} - WTFilm`, // Dynamically set the title
+      description: `${movie.overview}`, // Dynamically set the description
+      image: `https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`, // Your actual image URL
+      url: `https://wtfilm.vercel.app/movie/${id}`, // Your website URL
+      type: "website", // Open Graph type
+      site_name: "WTFilm", // Name of your site
+      locale: "en_US", // Locale for the content
+    },
   };
 }
 

@@ -8,6 +8,16 @@ export async function generateMetadata() {
   return {
     title: `Trending Movies - WTFilm`, // Dynamically set the title
     description: `Highlights the relevance and timeliness of the content, inviting users to keep up with popular discussions`, // Dynamically set the description
+    openGraph: {
+      title: `Trending Movies - WTFilm`, // Dynamically set the title
+      description: `Highlights the relevance and timeliness of the content, inviting users to keep up with popular discussions`, // Dynamically set the description
+      image:
+        "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
+      url: "https://wtfilm.vercel.app/trending", // Your website URL
+      type: "website", // Open Graph type
+      site_name: "WTFilm", // Name of your site
+      locale: "en_US", // Locale for the content
+    },
   };
 }
 

@@ -8,6 +8,17 @@ export async function generateMetadata() {
   return {
     title: `Popular Movies - WTFilm`, // Dynamically set the title
     description: `Explore the most popular movies of the moment on WTFilm. Discover what others are watching and find your next favorite film!`, // Dynamically set the description
+
+    openGraph: {
+      title: `Popular Movies - WTFilm`, // Dynamically set the title
+      description: `Explore the most popular movies of the moment on WTFilm. Discover what others are watching and find your next favorite film!`, // Dynamically set the description
+      image:
+        "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
+      url: "https://wtfilm.vercel.app/popular", // Your website URL
+      type: "website", // Open Graph type
+      site_name: "WTFilm", // Name of your site
+      locale: "en_US", // Locale for the content
+    },
   };
 }
 

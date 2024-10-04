@@ -1,4 +1,4 @@
-import getIds from "./moviesIds";
+import getIds from "./utils/moviesIds";
 
 export default async function sitemap() {
   const baseURL = "https://wtfilm.vercel.app/";

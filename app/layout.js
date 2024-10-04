@@ -2,8 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
-import wtfilm from "./wtfilm.png";
-import getKeywords from "./keywords";
+import getKeywords from "./utils/keywords";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -29,9 +28,12 @@ export async function generateMetadata() {
       title: "WTFilm - Watch Movies For Free",
       description:
         "Join WTFilm to watch and discover the latest hit movies. Stream in high-quality formats without interruptions, ensuring a top-notch entertainment experience.",
-      image: "path/to/your/image.jpg", // Replace with your actual image URL
+      image:
+        "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
       url: "https://wtfilm.vercel.app/", // Your website URL
       type: "website", // Open Graph type
+      site_name: "WTFilm", // Name of your site
+      locale: "en_US", // Locale for the content
     },
   };
 }
