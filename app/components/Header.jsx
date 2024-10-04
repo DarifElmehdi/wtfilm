@@ -74,13 +74,14 @@ export default function Header() {
                 <span className="sr-only">WTFilm</span>
               </Link>
               {hrefs.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {item.name}
-                </Link>
+                <li key={item.id} className="list-none">
+                  <Link
+                    href={item.href}
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
               ))}
             </nav>
           </SheetContent>
