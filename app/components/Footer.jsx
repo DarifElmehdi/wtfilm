@@ -22,7 +22,7 @@ export default function Footer() {
     {
       id: 4,
       name: "Browse Movies",
-      href: "/movies",
+      href: "/",
     },
     {
       id: 5,

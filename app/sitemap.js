@@ -25,13 +25,13 @@ export default async function sitemap() {
       priority: 0.25,
     },
     {
-      url: "https://wtfilm.vercel.app/popular",
+      url: "https://wtfilm.vercel.app/popular/",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5,
     },
     {
-      url: "https://wtfilm.vercel.app/trending",
+      url: "https://wtfilm.vercel.app/trending/",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5,
