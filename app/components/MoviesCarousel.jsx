@@ -33,7 +33,7 @@ export default async function MoviesCarousel(props) {
   const popular = data.results.slice(0, 12);
   return (
     <div className="w-full  max-w-screen-lg flex flex-col items-center space-y-6 mt-8">
-      <h4 className="text-secondary-primary font-normal italic">{name}</h4>
+      <h3 className="text-secondary-primary font-normal italic">{name}</h3>
       <Carousel
         opts={{
           align: "center",
