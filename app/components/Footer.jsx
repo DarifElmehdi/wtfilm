@@ -1,7 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 export default function Footer() {
   const hrefs = [
     {
@@ -34,15 +33,16 @@ export default function Footer() {
     <div>
       <Separator className="max-w-screen-lg mx-auto" />
       <footer className="max-w-screen-lg mx-auto flex flex-col items-center space-y-4 p-3">
-        <ul className="text-center space-x-4">
+        <ul className="text-center space-x-4 flex flex-row">
           {hrefs.map((item) => (
-            <Link
-              href={item.href}
-              key={item.id}
-              className="text-muted-foreground text-nowrap transition-colors hover:text-foreground"
-            >
-              {item.name}
-            </Link>
+            <li key={item.id} className="list-none">
+              <Link
+                href={item.href}
+                className="text-muted-foreground text-nowrap transition-colors hover:text-foreground"
+              >
+                {item.name}
+              </Link>
+            </li>
           ))}
         </ul>
         <aside className="mx-auto text-muted-foreground">

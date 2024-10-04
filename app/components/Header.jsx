@@ -44,13 +44,14 @@ export default function Header() {
           </Link>
 
           {hrefs.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className="text-muted-foreground text-nowrap transition-colors hover:text-foreground"
-            >
-              {item.name}
-            </Link>
+            <li key={item.id} className="list-none">
+              <Link
+                href={item.href}
+                className="text-muted-foreground text-nowrap transition-colors hover:text-foreground"
+              >
+                {item.name}
+              </Link>
+            </li>
           ))}
         </nav>
         <Sheet>

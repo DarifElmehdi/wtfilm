@@ -29,7 +29,7 @@ export default async function Hero() {
         </h4>
       </Link>
       <Link href="/popular">
-        <Button variant="destructive" to="/popular">
+        <Button variant="secondary" to="/popular" className="h-12 px-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
