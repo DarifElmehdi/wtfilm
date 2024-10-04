@@ -45,6 +45,12 @@ export async function generateMetadata({ params }) {
       site_name: "WTFilm", // Name of your site
       locale: "en_US", // Locale for the content
     },
+    twitter: {
+      card: "summary_large_image", // Twitter card type
+      image:
+        "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
+      url: "https://wtfilm.vercel.app/", // Your website URL
+    },
   };
 }
 
