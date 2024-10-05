@@ -28,7 +28,7 @@ export async function generateMetadata() {
       title: "WTFilm - Watch Movies For Free",
       description:
         "Join WTFilm to watch and discover the latest hit movies. Stream in high-quality formats without interruptions, ensuring a top-notch entertainment experience.",
-      image:
+      images:
         "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
       url: "https://wtfilm.vercel.app/", // Your website URL
       type: "website", // Open Graph type

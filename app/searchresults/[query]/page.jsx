@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${query} - WTFilm`, // Dynamically set the title
       description: `Discover your results on WTFilm! Browse through movies matching your search criteria and find the perfect film to watch`, // Dynamically set the description
-      image:
+      images:
         "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
       url: "https://wtfilm.vercel.app/searchresults", // Your website URL
       type: "website", // Open Graph type

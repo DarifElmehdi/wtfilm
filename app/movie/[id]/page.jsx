@@ -39,17 +39,11 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${movie.title} - WTFilm`, // Dynamically set the title
       description: `${movie.overview}`, // Dynamically set the description
-      image: `https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`, // Your actual image URL
+      images: `https://image.tmdb.org/t/w500${movie.backdrop_path}`, // Your actual image URL
       url: `https://wtfilm.vercel.app/movie/${id}`, // Your website URL
       type: "website", // Open Graph type
       site_name: "WTFilm", // Name of your site
       locale: "en_US", // Locale for the content
-    },
-    twitter: {
-      card: "summary_large_image", // Twitter card type
-      image:
-        "https://www.plex.tv/wp-content/uploads/2024/01/Watch-Free-Share-Image.png", // Your actual image URL
-      url: "https://wtfilm.vercel.app/", // Your website URL
     },
   };
 }

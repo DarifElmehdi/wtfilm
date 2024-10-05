@@ -14,7 +14,7 @@ export async function generateMetadata() {
     openGraph: {
       title: `Frequently Asked Questions - WTFilm`, // Dynamically set the title
       description: `Find answers to common questions about WTFilm, including streaming, subscriptions, and more. Get the help you need to enhance your movie experience!`, // Dynamically set the description
-      image:
+      images:
         "https://static.vecteezy.com/system/resources/thumbnails/029/154/547/small_2x/faq-frequently-asked-questions-acronym-on-wooden-cubes-on-a-yellow-background-photo.jpg", // Your actual image URL
       url: "https://wtfilm.vercel.app/faq", // Your website URL
       type: "website", // Open Graph type
