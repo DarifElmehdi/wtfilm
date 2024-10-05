@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${movie.title} - WTFilm`, // Dynamically set the title
       description: `${movie.overview}`, // Dynamically set the description
-      images: `https://image.tmdb.org/t/w500${movie.backdrop_path}`, // Your actual image URL
+      images: `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`, // Your actual image URL
       url: `https://wtfilm.vercel.app/movie/${id}`, // Your website URL
       type: "website", // Open Graph type
       site_name: "WTFilm", // Name of your site
