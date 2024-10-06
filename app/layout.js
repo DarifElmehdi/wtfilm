@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import getKeywords from "./utils/keywords";
+import Script from "next/script";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -49,6 +50,11 @@ export default function RootLayout({ children }) {
         name="google-adsense-account"
         content="ca-pub-2312021810291062"
       ></meta>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2312021810291062"
+        crossorigin="anonymous"
+      ></Script>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
           attribute="class"
