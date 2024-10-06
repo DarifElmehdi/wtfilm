@@ -45,6 +45,10 @@ export default function RootLayout({ children }) {
         name="google-site-verification"
         content="3QhXpuHPCCRSKUwMj3dG45B564ntQhiTkThY1lY3yWE"
       />
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-2312021810291062"
+      ></meta>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
           attribute="class"
