@@ -21,7 +21,7 @@ export default function Footer() {
     {
       id: 4,
       name: "Browse Movies",
-      href: "/",
+      href: "https://thermometerpushfulabnegate.com/v91j56sk?key=2dce535042a6582ec515de072042f72e",
     },
     {
       id: 5,
