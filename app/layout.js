@@ -46,14 +46,6 @@ export default function RootLayout({ children }) {
         name="google-site-verification"
         content="3QhXpuHPCCRSKUwMj3dG45B564ntQhiTkThY1lY3yWE"
       />
-      <Script
-        type="text/javascript"
-        src="//thermometerpushfulabnegate.com/d6/4e/c1/d64ec10293c2399069c4afd581fae50b.js"
-      ></Script>
-      <Script
-        type="text/javascript"
-        src="//thermometerpushfulabnegate.com/72/28/8e/72288ec7edc033db4b3a5dfda653af37.js"
-      ></Script>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
           attribute="class"
