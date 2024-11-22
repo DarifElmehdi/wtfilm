@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <meta
         name="google-site-verification"
-        content="3QhXpuHPCCRSKUwMj3dG45B564ntQhiTkThY1lY3yWE"
+        content="ayXiRB1PdfaxbYm2NK_OPqX8G9uwIJTDdngwzsMq5JU"
       />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
